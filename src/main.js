@@ -1,5 +1,3 @@
 // css libs
+import './styles/homepage.scss'
 import 'remixicon/fonts/remixicon.css'
-
-// custom css
-import './styles/main.scss'

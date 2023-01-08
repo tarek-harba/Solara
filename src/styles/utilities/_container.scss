@@ -1,0 +1,10 @@
+@use "../abstracts" as a;
+
+.container {
+  margin: 0 a.$space-xl;
+
+  &.-pd {
+    //padding-based alignment
+    padding: 0 a.$space-xl;
+  }
+}

@@ -2,12 +2,13 @@
   "name": "solara",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "browserslist": [ "defaults and supports es6-module" ],
   "scripts": {
     "build-dev": "webpack",
     "build": "NODE_ENV=production webpack",
     "watch": "webpack --watch",
-    "dev": "webpack serve"
+    "start": "webpack serve"
   },
   "keywords": [],
   "author": "",

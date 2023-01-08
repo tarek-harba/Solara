@@ -2,7 +2,11 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-let webpack_mode = 'production' ? process.env.NODE_ENV === 'production' : 'development';
+let webpack_mode = 'development';
+
+if (process.env.NODE_ENV === 'production') {
+    webpack_mode = 'production'
+}
 
 module.exports = {
     mode: webpack_mode,
@@ -45,7 +49,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(scss|css)$/,
+                test: /\.s?css$/,
                 use: [
                     'style-loader',
                     'css-loader',
