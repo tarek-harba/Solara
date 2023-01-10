@@ -1,3 +1,22 @@
+@use "../abstracts";
+
 .navbar {
-  padding: $space-s $space-xl;
+  display: flex;
+  height: 15vh;
+
+  &__navLinks {
+    display: flex;
+  }
+
+  &__link {
+    font-size: abstracts.$font-step--1;
+    color: abstracts.$neutral-light-color-0;
+    text-decoration: none;
+  }
+
+  &__logo {
+    height: 5vh;
+    object-fit: contain;
+    object-position: center;
+  }
 }

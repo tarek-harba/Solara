@@ -1,4 +1,5 @@
 @use "global" as g;
+@use "./layouts/navbar";
 
 body {
   background-color: g.$primary-color--1;
