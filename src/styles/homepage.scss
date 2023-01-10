@@ -1,6 +1,10 @@
-@use "global" as g;
+@use "global" as glb;
 @use "./layouts/navbar";
 
 body {
-  background-color: g.$primary-color--1;
+  background-color: glb.$primary-color--1;
+}
+
+img {
+  width: 100%;
 }

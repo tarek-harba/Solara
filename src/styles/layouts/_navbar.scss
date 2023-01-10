@@ -1,11 +1,12 @@
-@use "../abstracts";
+@use "../abstracts" as abs;
 
 .navbar {
   display: flex;
-  height: 15vh;
+  padding: abs.$space-s abs.$space-s;
 
   &__navLinks {
     display: flex;
+    // flex: 1;
   }
 
   &__link {
