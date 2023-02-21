@@ -13,6 +13,7 @@ module.exports = {
     entry: {
         main: path.resolve(__dirname, 'src/main.js'),
         homepage: path.resolve(__dirname, 'src/js/homepage.js'),
+        about: path.resolve(__dirname, 'src/js/about.js'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -61,13 +62,13 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
                 type: 'asset/resource',
             },
             {
                 test: /\.html$/i,
                 loader: "html-loader",
-              },
+            },
         ],
     },
     plugins: [
@@ -76,6 +77,12 @@ module.exports = {
             filename: 'index.html',
             template: 'src/index.html',
             chunks: ['main', 'homepage'],
+        }),
+        new HtmlWebpackPlugin({
+            title: 'About Us',
+            filename: 'about.html',
+            template: 'src/about.html',
+            chunks: ['main', 'about'],
         }),
     ],
 }   

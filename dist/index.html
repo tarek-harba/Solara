@@ -1,20 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solara - Homepage</title>
-  <script defer src="mainccb5bd8fededffedad2c.js"></script><script defer src="homepage48e65cbb37a98ccbef4f.js"></script></head>
+  <script defer src="main7fc34b3395c731887fc4.js"></script><script defer src="homepage859b86685960183b1503.js"></script></head>
   <body dir="rtl">
     <nav class="navbar container -pd">
+      <div class="navbar__hamburgerMenu">
+        <svg
+          viewBox="0 0 301 250"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="hamburgerMenu"
+        >
+          <path
+            class=".hamburgerMenu__firstLine"
+            d="M25 225H275.646"
+            stroke="url(#paint0_linear_388_1111)"
+            stroke-width="49.3364"
+            stroke-linecap="round"
+          />
+          <path
+            class=".hamburgerMenu__secondLine"
+            d="M25 125H275.646"
+            stroke="url(#paint1_linear_388_1111)"
+            stroke-width="49.3364"
+            stroke-linecap="round"
+          />
+          <path
+            class=".hamburgerMenu__thirdLine"
+            d="M25 25H275.646"
+            stroke="url(#paint2_linear_388_1111)"
+            stroke-width="49.3364"
+            stroke-linecap="round"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_388_1111"
+              x1="158"
+              y1="225"
+              x2="276"
+              y2="225"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FF6E4A" />
+              <stop offset="1" stop-color="#FF8B6E" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_388_1111"
+              x1="103.5"
+              y1="125"
+              x2="276"
+              y2="125"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FF6E4A" />
+              <stop offset="1" stop-color="#FF8B6E" />
+            </linearGradient>
+            <linearGradient
+              id="paint2_linear_388_1111"
+              x1="17.5"
+              y1="25"
+              x2="281.5"
+              y2="25"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FF6E4A" />
+              <stop offset="1" stop-color="#FF8B6E" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
       <ul class="navbar__navLinks">
         <li>
-          <button href="" class="button -primary">
+          <button href="" class="button -secondary -border">
             أخذ سعر تقديري لمنظومة مخصصة
           </button>
         </li>
-        <li><a href="" class="navbar__link">من نحن</a></li>
+        <li><a href="./index.html" class="navbar__link">الرئيسية</a></li>
+        <li><a href="./about.html" class="navbar__link">من نحن</a></li>
         <li><a href="" class="navbar__link">التواصل معنا</a></li>
         <li><a href="" class="navbar__link">المنظومات المتاحة</a></li>
         <li><a href="" class="navbar__link">التحقق من أصلية المنتجات</a></li>
@@ -29,106 +95,226 @@
         </p>
         <button class="button -primary">رؤية الأنظمة المتاحة</button>
       </div>
-      <div class="hero__scene"></div>
-      <div class="hero__socialProof">
+      <div class="hero__scene">
+        <img src="hero-img.jpg" alt="" />
+      </div>
+      <div class="socialProof">
         <h4 class="socialProof__title">الشركات التي تثق بنا كمورد</h4>
         <div class="socialProof__companies">
-          <img
-            src="sunpower-logo.svg"
-            alt=""
-            class="socialProof__company"
-          />
-          <img
-            src="jinko-logo.png"
-            alt=""
-            class="socialProof__company"
-          />
-          <img
-            src="growatt-logo.png"
-            alt=""
-            class="socialProof__company"
-          />
-          <img
-            src="marvel-logo.png"
-            alt=""
-            class="socialProof__company"
-          />
-          <img
-            src="longi-logo.png"
-            alt=""
-            class="socialProof__company"
-          />
+          <div class="socialProof__company">
+            <img
+              src="sunpower-logo.svg"
+              class="socialProof__logo"
+              alt=""
+            />
+          </div>
+          <div class="socialProof__company">
+            <img
+              src="jinko-logo.png"
+              class="socialProof__logo"
+              alt=""
+            />
+          </div>
+          <div class="socialProof__company">
+            <img
+              src="growatt-logo.png"
+              class="socialProof__logo"
+              alt=""
+            />
+          </div>
+          <div class="socialProof__company">
+            <img
+              src="marvel-logo.png"
+              class="socialProof__logo"
+              alt=""
+            />
+          </div>
+          <div class="socialProof__company">
+            <img
+              src="longi-logo.png"
+              class="socialProof__logo"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </header>
-    <main class="container">
-      <section class="availableProducts">
-        <h2 class="availableProducts__heading">الأنظمة المتاحة حالياً</h2>
+    <main>
+      <section class="availableProducts container -pd">
+        <img
+          src="solara-icon.svg"
+          alt=""
+          class="availableProducts__logoOverlay"
+        />
         <div class="carousel">
-          <div class="carousel__content">
+          <div class="carousel__heading">
+            <h2 class="carousel__title">الأنظمة المتاحة حالياً</h2>
+            <div class="carousel__controls">
+              <i
+                class="ri-arrow-right-s-line carousel__arrow"
+                data-name="availableProducts"
+                data-direction="right"
+              ></i>
+              <i
+                class="ri-arrow-left-s-line carousel__arrow"
+                data-name="availableProducts"
+                data-direction="left"
+              ></i>
+            </div>
+          </div>
+          <div class="carousel__content -col-3" data-name="availableProducts">
             <div class="carousel__card">
               <div class="solarSystem">
+                <img
+                  src="project-1.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
                 <h3 class="solarSystem__heading">النظام المنزلي البسيط</h3>
-                <button class="button -secondary">رؤية النظام</button>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
               </div>
             </div>
             <div class="carousel__card">
               <div class="solarSystem">
+                <img
+                  src="project-2.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
                 <h3 class="solarSystem__heading">النظام المنزلي المتقدم</h3>
-                <button class="button -secondary">رؤية النظام</button>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
               </div>
             </div>
             <div class="carousel__card">
               <div class="solarSystem">
+                <img
+                  src="project-3.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
                 <h3 class="solarSystem__heading">النظام المنزلي البريميوم</h3>
-                <button class="button -secondary">رؤية النظام</button>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="solarSystem">
+                <img
+                  src="project-4.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
+                <h3 class="solarSystem__heading">النظام المنزلي البريميوم</h3>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="solarSystem">
+                <img
+                  src="project-1.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
+                <h3 class="solarSystem__heading">النظام المنزلي البسيط</h3>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="solarSystem">
+                <img
+                  src="project-2.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
+                <h3 class="solarSystem__heading">النظام المنزلي المتقدم</h3>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="solarSystem">
+                <img
+                  src="project-3.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
+                <h3 class="solarSystem__heading">النظام المنزلي البريميوم</h3>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="solarSystem">
+                <img
+                  src="project-4.jpg"
+                  alt=""
+                  class="solarSystem__img"
+                />
+                <h3 class="solarSystem__heading">النظام المنزلي البريميوم</h3>
+                <button class="solarSystem__cta button -secondary">
+                  رؤية النظام
+                </button>
               </div>
             </div>
           </div>
         </div>
         <button class="button -primary">رؤية باقي الأنظمة</button>
       </section>
-      <section class="testimonials">
+      <section class="testimonials container">
         <h2 class="testimonials__heading">حسن حياتك مع أنظمتنا</h2>
         <div class="testimonials__content">
           <div class="testimonial">
+            <img class="testimonial__img" src="customer-1.jpg" />
             <div class="testimonial__content">
               <p class="testimonial__story">
                 “شركة سولارا قدمت لي الدعم الكامل للحصول على نظام طاقة شمسية
                 يكفي حاجاتي اليومية بطريقة منتظمة ويعتمد عليها...”
               </p>
               <span class="testimonial__client">-الأستاذ أحمد العلي</span>
+              <button class="button -secondary">قراءة باقي القصة</button>
             </div>
-            <button class="button -secondary">قراءة باقي القصة</button>
           </div>
           <div class="testimonial">
+            <img class="testimonial__img" src="customer-2.jpg" />
             <div class="testimonial__content">
               <p class="testimonial__story">
                 “كمطور مواقع, طبيعة عملي بتتطلب مني سرعة التحرك والتواصل لمتابعة
                 مشاريع العملاء. ولفترة طويلة كانت الكهربا مشكلة...”
               </p>
               <span class="testimonial__client">-الأستاذ محمد حسن</span>
+              <button class="button -secondary">قراءة باقي القصة</button>
             </div>
-            <button class="button -secondary">قراءة باقي القصة</button>
           </div>
           <div class="testimonial">
+            <img class="testimonial__img" src="customer-1.jpg" />
             <div class="testimonial__content">
               <p class="testimonial__story">
                 “شركة سولارا قدمت لي الدعم الكامل للحصول على نظام طاقة شمسية
                 يكفي حاجاتي اليومية بطريقة منتظمة ويعتمد عليها...”
               </p>
               <span class="testimonial__client">-الأستاذة عليا الشيخ</span>
+              <button class="button -secondary">قراءة باقي القصة</button>
             </div>
-            <button class="button -secondary">قراءة باقي القصة</button>
           </div>
         </div>
       </section>
-      <div class="features">
+      <div class="features container">
         <section class="feature">
           <div class="feature__content">
             <h2 class="feature__heading">من المصنع الأصلي لعندك</h2>
             <p class="feature__desc">
-              جميع المنتجات يلي بنقدمها هي منتجات أصلية. ولأن سورلارا بتفهم خوف
+              جميع المنتجات يلي بنقدمها هي منتجات أصلية. ولأن سولارا بتفهم خوف
               العملاء من شراء قطع غير أصلية, ولأن منحب نوفرلكن الأمان الكامل,
               فنحنا منقدم طريقة سهلة لتتحقق من أصلية منتجاتنا. كل يلي عليك تعمله
               هوي أنك تاخد الرقم الخاص بالمنتج يلي عمتشتريه من عنا وتدخل عالصفحة
@@ -138,12 +324,12 @@
             <button class="button -secondary">اقرأ المزيد</button>
           </div>
           <img
-            src="growatt-logo.png"
+            src="feature-1.jpg"
             alt=""
             class="feature__img"
           />
         </section>
-        <section class="feature">
+        <section class="feature -reversed">
           <div class="feature__content">
             <h2 class="feature__heading">سولارا بتعرف تساعدك بخبراتها</h2>
             <p class="feature__desc">
@@ -155,16 +341,22 @@
             <button class="button -secondary">اقرأ المزيد</button>
           </div>
           <img
-            src="growatt-logo.png"
+            src="feature-2.jpg"
             alt=""
             class="feature__img"
           />
         </section>
       </div>
-      <section class="experts">
-        <h2 class="experts__heading"></h2>
+      <section class="experts container">
         <div class="carousel">
-          <div class="carousel__content">
+          <div class="carousel__heading -centered">
+            <h2 class="carousel__title">فريق الخبراء</h2>
+          </div>
+          <div
+            class="carousel__content -col-4"
+            data-name="experts"
+            data-hasIndicators
+          >
             <div class="carousel__card">
               <div class="expert">
                 <img
@@ -173,7 +365,7 @@
                   class="expert__img"
                 />
                 <span class="expert__name">المهندس أحمد العلي</span>
-                <p class="expert__specialty">خبير في تركيب الأنظمة الشمسية</p>
+                <p class="expert__specialty">خبير تركيب الأنظمة الشمسية</p>
               </div>
             </div>
             <div class="carousel__card">
@@ -184,7 +376,7 @@
                   class="expert__img"
                 />
                 <span class="expert__name">المهندس حسن محمد</span>
-                <p class="expert__specialty">خبير في بناء الأنظمة الذكية</p>
+                <p class="expert__specialty">خبير بناء الأنظمة الذكية</p>
               </div>
             </div>
             <div class="carousel__card">
@@ -195,7 +387,7 @@
                   class="expert__img"
                 />
                 <span class="expert__name">المهندسة عليا عصام</span>
-                <p class="expert__specialty">خبيرة في الالكترونيات</p>
+                <p class="expert__specialty">خبيرة الالكترونيات</p>
               </div>
             </div>
             <div class="carousel__card">
@@ -206,23 +398,70 @@
                   class="expert__img"
                 />
                 <span class="expert__name">المهندس عيسى الأحمد</span>
-                <p class="expert__specialty">خبير في إدارة مشاريع الطاقة</p>
+                <p class="expert__specialty">خبير إدارة مشاريع الطاقة</p>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="expert">
+                <img
+                  src="expert-1.jpg"
+                  alt=""
+                  class="expert__img"
+                />
+                <span class="expert__name">المهندس أحمد العلي</span>
+                <p class="expert__specialty">خبير تركيب الأنظمة الشمسية</p>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="expert">
+                <img
+                  src="expert-2.jpg"
+                  alt=""
+                  class="expert__img"
+                />
+                <span class="expert__name">المهندس حسن محمد</span>
+                <p class="expert__specialty">خبير بناء الأنظمة الذكية</p>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="expert">
+                <img
+                  src="expert-3.jpg"
+                  alt=""
+                  class="expert__img"
+                />
+                <span class="expert__name">المهندسة عليا عصام</span>
+                <p class="expert__specialty">خبيرة الالكترونيات</p>
+              </div>
+            </div>
+            <div class="carousel__card">
+              <div class="expert">
+                <img
+                  src="expert-4.jpg"
+                  alt=""
+                  class="expert__img"
+                />
+                <span class="expert__name">المهندس عيسى الأحمد</span>
+                <p class="expert__specialty">خبير إدارة مشاريع الطاقة</p>
               </div>
             </div>
           </div>
-          <div class="carousel__controls">
-            <i class="ri-arrow-left-s-line"></i>
-            <div class="carousel__indicators">
-              <i class="ri-checkbox-blank-circle-fill carousel__indicator"></i>
-              <i class="ri-checkbox-blank-circle-line carousel__indicator"></i>
-              <i class="ri-checkbox-blank-circle-line carousel__indicator"></i>
-              <i class="ri-checkbox-blank-circle-line carousel__indicator"></i>
-            </div>
-            <i class="ri-arrow-right-s-line"></i>
+          <div class="carousel__controls -indicators" data-name="experts">
+            <i
+              class="ri-arrow-right-s-line carousel__arrow"
+              data-name="experts"
+              data-direction="right"
+            ></i>
+            <div class="carousel__indicators" data-name="experts"></div>
+            <i
+              class="ri-arrow-left-s-line carousel__arrow"
+              data-name="experts"
+              data-direction="left"
+            ></i>
           </div>
         </div>
       </section>
-      <section class="largeProjects">
+      <section class="largeProjects container">
         <h2 class="largeProjects__heading">احصل على الدعم بمشاريعك الكبيرة</h2>
         <p class="largeProjects__desc">
           سولارا بتقدم حلول الطاقة الشمسية للمنشآت الصناعية والزراعية من أي حجم,

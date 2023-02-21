@@ -1,3 +1,4 @@
+@use "colors";
 /* fluid font steps
     @link https://utopia.fyi/type/calculator?c=320,16,1.333,1240,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 
 */
@@ -9,6 +10,13 @@ $font-step-2: clamp(1.78rem, calc(1.7rem + 0.39vw), 2rem);
 $font-step-3: clamp(2.37rem, calc(2.27rem + 0.51vw), 2.66rem);
 $font-step-4: clamp(3.16rem, calc(3.02rem + 0.69vw), 3.55rem);
 $font-step-5: clamp(4.21rem, calc(4.03rem + 0.92vw), 4.74rem);
+
+/* line-height */
+$lg-lheight: 125%;
+$md-lheight: 140%;
+$smd-lheight: 150%;
+$rg-lheight: 170%;
+$smd-lheight: 140%;
 
 /* fluid space steps
     @link https://utopia.fyi/space/calculator?c=320,16,1.333,1240,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 
@@ -35,3 +43,19 @@ $space-2xl-3xl: clamp(4rem, calc(3.04rem + 4.78vw), 6.75rem);
 
 /* Custom pairs */
 $space-s-l: clamp(1rem, calc(0.57rem + 2.17vw), 2.25rem);
+
+/* border radiuses */
+$bradius-0: 0.25rem;
+$bradius-1: 0.5rem;
+
+/* gradient masks */
+$gmask-0: linear-gradient(
+  180deg,
+  rgba(colors.$neutral-dark-color-0, 0.3) 0%,
+  colors.$neutral-dark-color-0 100%
+);
+$gmask-1: linear-gradient(
+  180deg,
+  rgba(colors.$neutral-dark-color-0, 0.5) 0%,
+  colors.$neutral-dark-color-0 100%
+);

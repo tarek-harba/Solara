@@ -1,0 +1,14 @@
+@use "./abstracts" as *;
+@use "./utilities";
+@use "./base";
+@use "./components";
+@use "./layouts/carousel";
+@use "./layouts/navbar";
+@use "./layouts/footer";
+
+body {
+  background-color: $primary-color--1;
+  color: $neutral-light-color-0;
+  width: 100%;
+  overflow-x: hidden;
+}
