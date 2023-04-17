@@ -1,0 +1,53 @@
+@use "./abstracts" as *;
+@use "./utilities";
+@use "./base";
+@use "./components";
+@use "./layouts/carousel";
+@use "./layouts/navbar";
+@use "./layouts/footer";
+
+main {
+  margin-top: 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-xl;
+  background: linear-gradient(
+      180deg,
+      #141414 0%,
+      rgba(20, 20, 20, 0.8) 50%,
+      rgba(20, 20, 20, 0.9) 100%
+    ),
+    url(../assets/img/estimate-price/estimate-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+
+  &.container {
+    padding: $space-xl;
+
+    @include media("<=ipad") {
+      padding: $space-xl $space-m;
+    }
+
+    @include media("<=LGphone") {
+      padding: $space-xl $space-s;
+    }
+  }
+
+  align-content: center;
+
+  @include media("<=ipad") {
+    grid-template-columns: auto;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $space-xs;
+  }
+}

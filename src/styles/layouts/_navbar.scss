@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-color--1;
+  padding: 0 $space-xl;
+
+  &.container {
+    padding-top: $space-s;
+    padding-bottom: $space-s;
+  }
+
+  &__navLinks {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: $space-m;
+
+    @include media("<=1060px") {
+      flex-direction: column-reverse;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      z-index: 5;
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+      transition: 0.2s ease-in-out;
+
+      &.-hidden {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      background-color: $neutral-dark-color-0;
+    }
+  }
+
+  &__link {
+    font-size: $font-step--1;
+    color: $neutral-light-color-0;
+    text-decoration: none;
+  }
+
+  &__logo {
+    height: clamp(2rem, 5vh, 3rem);
+    object-fit: contain;
+    object-position: center;
+
+    @include media("<=LGphone") {
+      height: min(5vh, 2rem);
+    }
+  }
+
+  &__hamburgerMenu {
+    display: none;
+    height: min(3vh, 2rem);
+    cursor: pointer;
+    z-index: 6;
+
+    @include media("<=1060px") {
+      display: initial;
+    }
+  }
+}
+
+.hamburgerMenu {
+  height: 100%;
+}
+
+body {
+  &.-no-scroll {
+    overflow-y: hidden;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.container {
+  margin: 0 $space-xl;
+  margin-bottom: $space-3xl;
+
+  @include media(">=2160px") {
+    margin: 0 30%;
+    margin-bottom: $space-3xl;
+  }
+
+  @include media("<=ipad") {
+    margin: 0 $space-m;
+    margin-bottom: $space-3xl;
+  }
+
+  @include media("<=LGphone") {
+    margin: 0 $space-s;
+    margin-bottom: $space-3xl;
+  }
+
+  &.-pd {
+    //padding-based alignment
+    margin: 0 0;
+    margin-bottom: 0;
+    padding: 0 $space-xl;
+    @include media(">2160px") {
+      padding: 0 30%;
+    }
+
+    @include media("<=ipad") {
+      padding: 0 $space-m;
+    }
+
+    @include media("<=LGphone") {
+      padding: 0 $space-s;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+body,
+button,
+select {
+  font-family: "Cairo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $lg-lheight;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: $font-step-5;
+
+  @include media("<=tablet") {
+    font-size: $font-step-3;
+    line-height: $md-lheight;
+  }
+}
+h2 {
+  font-size: $font-step-3;
+  @include media("<=tablet") {
+    font-size: $font-step-2;
+    line-height: $smd-lheight;
+  }
+}
+h3 {
+  font-size: $font-step-2;
+}
+h4 {
+  font-size: $font-step-1;
+}
+h5 {
+  font-size: $font-step-0;
+}
+h6 {
+  font-size: $font-step--1;
+}
+
+p {
+  font-size: $font-step-0;
+  line-height: $rg-lheight;
+}
+
+a {
+  line-height: $rg-lheight;
+}

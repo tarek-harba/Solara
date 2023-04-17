@@ -1,0 +1,455 @@
+@use "./abstracts" as *;
+@use "./utilities";
+@use "./base";
+@use "./components";
+@use "./layouts/carousel";
+@use "./layouts/navbar";
+@use "./layouts/footer";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // min-height: calmp(400px, 80vh, 1400px);
+
+  &__valueProp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-top: $space-xl;
+    margin-bottom: $space-m;
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: $space-s;
+  }
+
+  &__desc {
+    margin-bottom: $space-m;
+  }
+
+  &__scene {
+    width: 50%;
+
+    @include media("<=LGphone") {
+      width: 100%;
+    }
+
+    img {
+      border-radius: $bradius-1;
+    }
+  }
+}
+
+.socialProof {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  margin-top: $space-l;
+
+  &__title {
+    font-size: $font-step--1;
+    font-weight: normal;
+    color: $neutral-light-color-4;
+    margin-bottom: $space-m;
+  }
+
+  &__companies {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $space-m;
+    // overflow-x: scroll;
+  }
+
+  &__company {
+    max-height: clamp(32px, 10vh, 80px);
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: $space-2xs;
+    background-color: $neutral-light-color-0;
+  }
+
+  &__logo {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.availableProducts {
+  background: $gradient-1;
+  position: relative;
+  overflow: hidden;
+
+  &.container {
+    padding-top: $space-l;
+    padding-bottom: $space-l;
+    margin-bottom: $space-2xl;
+  }
+
+  &__logoOverlay {
+    position: absolute;
+    top: -12.5%;
+    right: -15%;
+    width: 30%;
+    z-index: 0;
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+
+  .carousel {
+    margin-bottom: $space-l;
+    z-index: 2;
+
+    &__content {
+      width: calc(100% + ($space-xl * 2));
+      transform: translateX($space-xl);
+      padding: 0 $space-xl;
+      scroll-padding: 0 $space-xl;
+    }
+  }
+}
+
+.solarSystem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: $space-m;
+  gap: $space-m;
+  border-radius: $bradius-1;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $gmask-0;
+    z-index: -1;
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+  }
+
+  &__heading {
+    font-size: $font-step-1;
+    user-select: none;
+    font-weight: normal;
+  }
+
+  &__cta {
+    position: relative;
+  }
+
+  &:hover &__cta {
+    // max-height: 100%;
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-m;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-content: space-between;
+    gap: $space-m;
+    width: 100%;
+
+    @include media("<=1092px") {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+.testimonial {
+  position: relative;
+  min-height: clamp(300px, 75vh, 700px);
+  border-radius: $bradius-1;
+  overflow: hidden;
+
+  @include media("<=1092px") {
+    margin: 0 10%;
+  }
+
+  @include media("<=LGphone") {
+    margin: 0;
+    min-height: clamp(200px, 50vh, 700px);
+  }
+  // aspect-ratio: 3/4;
+  // max-height: 600px;
+  // flex: max(25rem, 1);
+  // flex: 1;
+
+  &__img,
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: $space-xl $space-l;
+    height: 100%;
+    background: $gmask-0;
+  }
+
+  &__story {
+    text-align: center;
+    margin-bottom: $space-s;
+    font-weight: bold;
+  }
+
+  &__client {
+    margin-bottom: $space-m;
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xl;
+}
+
+.feature {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $space-xl;
+
+  @include media("<=1300px") {
+    flex-direction: column-reverse;
+    max-height: 700px;
+    border-radius: $bradius-1;
+    overflow: hidden;
+    gap: 0;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   background: $gmask-0;
+    //   width: 100%;
+    //   height: 100%;
+    // }
+  }
+
+  &.-reversed {
+    flex-direction: row-reverse;
+    @include media("<=1300px") {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-s;
+
+    @include media("<=1300px") {
+      background: $neutral-light-color-0;
+      color: $neutral-dark-color-0;
+      transform: translateX;
+      padding: $space-2xl;
+
+      .button {
+        background: $neutral-dark-color-0;
+        color: $neutral-light-color-0;
+      }
+    }
+
+    @include media("<=LGphone") {
+      padding: $space-l $space-m;
+      text-align: center;
+      align-items: center;
+    }
+
+    * {
+      flex-basis: 100%;
+    }
+  }
+
+  &__img {
+    max-width: 40%;
+    border-radius: $bradius-1;
+    object-fit: cover;
+    object-position: center;
+
+    @include media("<=1300px") {
+      max-width: 100%;
+      // position: absolute;
+      // right: 0;
+      // top: 0;
+      // width: 100%;
+      // height: 100%;
+      // z-index: -2;
+    }
+  }
+}
+
+.expert {
+  position: relative;
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: $space-xs;
+  border-radius: $bradius-1;
+  overflow: hidden;
+  padding: $space-xl $space-m;
+
+  @include media("<=ipad") {
+    min-height: clamp(200px, 40vh, 600px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $gmask-0;
+    z-index: -1;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    right: 0;
+    top: 0;
+    z-index: -2;
+  }
+
+  &__specialty {
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.largeProjects {
+  // min-height: clamp(300px, 75vh, 600px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background: $gmask-0, url(../assets/img/large-projects.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: $bradius-1;
+  padding: calc(3 * $space-3xl) $space-m $space-xl $space-m;
+  gap: $space-s;
+  text-align: center;
+
+  @include media("<=LGphone") {
+    padding-top: calc(2 * $space-3xl);
+  }
+
+  &__desc {
+    width: 50%;
+    margin-bottom: $space-3xs;
+
+    @include media("<=ipad") {
+      width: 100%;
+    }
+  }
+}
+
+.finalCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(300px, 100vh, 800px);
+  width: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba($neutral-dark-color-0, 0.65) 0%,
+      rgba($neutral-dark-color-0, 0.5) 50%,
+      rgba($neutral-dark-color-0, 0.65) 100%
+    ),
+    url(../assets/img/cta-section-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+
+  &__heading {
+    font-size: $font-step-5;
+    margin-bottom: $space-s;
+    width: 50%;
+    text-align: center;
+
+    @include media("<=ipad") {
+      width: 100%;
+    }
+
+    @include media("<=LGphone") {
+      font-size: $font-step-3;
+    }
+  }
+
+  @include media("<=LGphone") {
+    min-height: clamp(300px, 70vh, 800px);
+  }
+
+  &__desc {
+    margin-bottom: $space-m;
+  }
+}

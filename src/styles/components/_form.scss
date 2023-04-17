@@ -1,0 +1,125 @@
+@use "../abstracts" as *;
+
+.form {
+  &.-bg-light {
+    background-color: $neutral-light-color-0;
+    padding: $space-l $space-m;
+    display: flex;
+    flex-direction: column;
+    gap: $space-m;
+
+    .form__title {
+      align-self: start;
+      text-align: start;
+    }
+    .form__title,
+    .form__label,
+    .form__checkboxContainer {
+      color: $neutral-dark-color-0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: $font-step-1;
+    text-align: center;
+    // margin-bottom: $space-s;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: $space-s;
+  }
+
+  &__inp,
+  &__select {
+    padding: $space-2xs;
+  }
+
+  &__select {
+    position: relative;
+    border-radius: $bradius-0;
+    background-color: $neutral-light-color-4;
+    width: 100%;
+    padding: $space-2xs;
+    border: none;
+    border-left: $space-2xs solid transparent;
+  }
+
+  &__option:hover {
+    background-color: $accent-color-1;
+  }
+
+  &__texta {
+    padding: $space-2xs;
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-m;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__checkboxContainer {
+    padding: $space-xs;
+    border-radius: $bradius-2;
+    background-color: $neutral-light-color-4;
+    display: flex;
+    gap: $space-3xs;
+    align-items: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:has(input:checked) {
+      background-color: $neutral-light-color-0;
+      border-color: $accent-color-2;
+    }
+  }
+
+  &__checkbox {
+    width: $font-step-0;
+    height: $font-step-0;
+    background-color: $neutral-light-color-0;
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: $bradius-2;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $accent-color-1;
+      border-radius: $bradius-2;
+      opacity: 0;
+    }
+
+    &:checked::after {
+      opacity: 1;
+    }
+  }
+
+  &__label.-clickable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+  }
+
+  &__cta {
+    margin-top: $space-xs;
+    align-self: start;
+  }
+}

@@ -1,0 +1,65 @@
+@use "./abstracts" as *;
+@use "./utilities";
+@use "./base";
+@use "./components";
+@use "./layouts/navbar";
+@use "./layouts/footer";
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 30%;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: $space-s;
+
+    @include media("<=LGphone") {
+      min-width: 300px;
+      width: 90%;
+    }
+  }
+
+  &__icon {
+    font-size: $font-step-2;
+  }
+
+  &__socialContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-s;
+  }
+
+  &__socialHeading {
+    font-weight: bold;
+    font-size: $font-step-1;
+  }
+
+  &__socialLinks {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+  }
+
+  &__other {
+    display: flex;
+    gap: $space-s;
+  }
+
+  &__contactInfo {
+    display: flex;
+    align-items: center;
+    gap: $space-3xs;
+  }
+
+  &__info {
+    font-size: $font-step--1;
+  }
+
+  &__infoIcon {
+    font-size: $font-step-1;
+  }
+}

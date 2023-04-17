@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $space-l;
+  background: $neutral-dark-color-0;
+
+  @include media("<=tablet") {
+    align-items: start;
+  }
+
+  &.container {
+    padding-top: $space-xl;
+    padding-bottom: $space-xl;
+  }
+
+  &__links {
+    display: flex;
+    gap: $space-m;
+
+    @include media("<=tablet") {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    color: $neutral-light-color-0;
+    text-decoration: none;
+  }
+
+  &__socialLinks {
+    display: flex;
+    gap: $space-m;
+    font-size: $font-step-2;
+  }
+
+  &__copyRight {
+    font-size: $font-step--1;
+  }
+}

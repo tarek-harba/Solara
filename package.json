@@ -1,0 +1,38 @@
+{
+  "name": "solara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "browserslist": [
+    "defaults and supports es6-module"
+  ],
+  "scripts": {
+    "dev": "webpack --mode=development",
+    "build": "webpack  --mode=production",
+    "watch": "webpack --watch",
+    "start": "webpack serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
+    "html-webpack-loader": "^0.0.5",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5",
+    "loadash": "^1.0.0",
+    "remixicon": "^2.5.0"
+  }
+}

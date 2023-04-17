@@ -1,0 +1,95 @@
+@use "../abstracts" as *;
+
+.filter {
+  width: 100%;
+  display: flex;
+  gap: $space-xs;
+
+  &__select {
+    flex: 1;
+    position: relative;
+    border-radius: $bradius-0;
+    width: 100%;
+    padding: $space-2xs;
+    border-left: $space-2xs solid transparent;
+  }
+
+  &__option {
+    &:hover {
+      background-color: $accent-color-1;
+    }
+  }
+}
+
+.expert {
+  position: relative;
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: $space-xs;
+  border-radius: $bradius-1;
+  overflow: hidden;
+  padding: $space-xl $space-m;
+
+  @include media("<=ipad") {
+    min-height: clamp(200px, 40vh, 600px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $gmask-0;
+    z-index: -1;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    right: 0;
+    top: 0;
+    z-index: -2;
+  }
+
+  &__specialty {
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.largeProjects {
+  // min-height: clamp(300px, 75vh, 600px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background: $gmask-0, url(../assets/img/large-projects.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: $bradius-1;
+  padding: calc(3 * $space-3xl) $space-m $space-xl $space-m;
+  gap: $space-s;
+  text-align: center;
+
+  @include media("<=LGphone") {
+    padding-top: calc(2 * $space-3xl);
+  }
+
+  &__desc {
+    width: 50%;
+    margin-bottom: $space-3xs;
+
+    @include media("<=ipad") {
+      width: 100%;
+    }
+  }
+}

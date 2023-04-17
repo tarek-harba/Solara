@@ -1,0 +1,61 @@
+@use "./abstracts" as *;
+@use "./utilities";
+@use "./base";
+@use "./components";
+@use "./layouts/carousel";
+@use "./layouts/navbar";
+@use "./layouts/footer";
+
+.system {
+  display: grid;
+  grid-template-columns: auto 37.5%;
+  gap: $space-xl;
+
+  @include media("<=1024px") {
+    grid-template-columns: auto;
+    grid-template-areas: "pic" "info";
+    gap: $space-m;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: $space-xl;
+
+    @include media("<=1024px") {
+      grid-area: info;
+    }
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: $space-s;
+  }
+
+  &__detailName {
+    font-weight: bold;
+  }
+
+  &__imgContainer {
+    aspect-ratio: 1;
+
+    @include media("<=1024px") {
+      aspect-ratio: 2/1;
+      grid-area: "pic";
+    }
+  }
+
+  &__img {
+    border-radius: $bradius-1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__cta {
+    display: block;
+  }
+}

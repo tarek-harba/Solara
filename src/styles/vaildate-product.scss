@@ -1,0 +1,82 @@
+@use "./abstracts" as *;
+@use "./utilities";
+@use "./base";
+@use "./components";
+@use "./layouts/carousel";
+@use "./layouts/navbar";
+@use "./layouts/footer";
+
+main {
+  margin-top: 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-xl;
+  background: linear-gradient(
+      180deg,
+      #141414 0%,
+      rgba(20, 20, 20, 0.8) 50%,
+      rgba(20, 20, 20, 0.9) 100%
+    ),
+    url(../assets/img/product-vaildation/vaildate-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  align-content: center;
+
+  &.container {
+    padding: $space-xl;
+
+    @include media("<=ipad") {
+      padding: $space-xl $space-m;
+    }
+
+    @include media("<=LGphone") {
+      padding: $space-xl $space-s;
+    }
+  }
+
+  @include media("<=ipad") {
+    grid-template-columns: auto;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $space-xs;
+  }
+
+  &__companies {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: $space-m;
+    margin-top: $space-s;
+  }
+
+  &__company {
+    max-height: clamp(32px, 10vh, 80px);
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: $space-2xs;
+    background-color: $neutral-light-color-0;
+  }
+
+  &__logo {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+img {
+  max-width: 100%;
+}
